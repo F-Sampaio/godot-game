@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://arts/TileSet/Scenario.tres" type="TileSet" id=2]
+[ext_resource path="res://arts/Background/menu.png" type="Texture" id=3]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://StageTrigger.tscn" type="PackedScene" id=5]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+position = Vector2( 71, 145.5 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 31, 0, 50, 30, 0, 65536, 31, 0, 65571, 4, 0, 65572, 5, 0, 65577, 4, 0, 65578, 5, 0, 65586, 30, 0, 131072, 31, 0, 131088, 9, 0, 131104, 4, 0, 131105, 1, 0, 131106, 1, 0, 131107, 1, 0, 131108, 1, 0, 131109, 1, 0, 131110, 1, 0, 131111, 1, 0, 131112, 1, 0, 131113, 1, 0, 131114, 1, 0, 131115, 1, 0, 131116, 1, 0, 131117, 1, 0, 131118, 5, 0, 131122, 30, 0, 196608, 31, 0, 196624, 10, 0, 196658, 30, 0, 262144, 31, 0, 262157, 6, 0, 262158, 8, 0, 262160, 10, 0, 262162, 6, 0, 262163, 7, 0, 262164, 8, 0, 262174, 9, 0, 262194, 30, 0, 327680, 31, 0, 327696, 10, 0, 327710, 10, 0, 327718, 6, 0, 327719, 7, 0, 327720, 8, 0, 327729, 6, 0, 327730, 3, 0, 393216, 31, 0, 393226, 6, 0, 393227, 8, 0, 393232, 10, 0, 393246, 10, 0, 393250, 6, 0, 393251, 7, 0, 393252, 8, 0, 393264, 6, 0, 393265, 3, 0, 393266, 29, 0, 458752, 31, 0, 458768, 10, 0, 458774, 6, 0, 458775, 8, 0, 458780, 9, 0, 458782, 10, 0, 458783, 5, 0, 458798, 9, 0, 458800, 1610612744, 0, 458801, 1610612743, 0, 458802, 3, 0, 524288, 31, 0, 524294, 4, 0, 524295, 8, 0, 524304, 10, 0, 524316, 10, 0, 524318, 10, 0, 524319, 29, 0, 524320, 5, 0, 524325, 6, 0, 524326, 7, 0, 524327, 8, 0, 524334, 10, 0, 524338, 30, 0, 589824, 31, 0, 589829, 4, 0, 589830, 3, 0, 589831, 31, 0, 589840, 10, 0, 589850, 9, 0, 589852, 10, 0, 589854, 10, 0, 589855, 3, 0, 589856, 29, 0, 589857, 5, 0, 589868, 9, 0, 589870, 10, 0, 589874, 30, 0, 655360, 31, 0, 655364, 4, 0, 655365, 3, 0, 655366, 29, 0, 655367, 31, 0, 655371, 4, 0, 655372, 5, 0, 655376, 10, 0, 655381, 4, 0, 655382, 5, 0, 655386, 10, 0, 655388, 10, 0, 655390, 10, 0, 655391, 29, 0, 655392, 3, 0, 655393, 29, 0, 655394, 5, 0, 655404, 10, 0, 655406, 10, 0, 655410, 30, 0, 720896, 3, 0, 720897, 0, 0, 720898, 1, 0, 720899, 2, 0, 720900, 7, 0, 720901, 7, 0, 720902, 7, 0, 720903, 7, 0, 720904, 0, 0, 720905, 1, 0, 720906, 2, 0, 720907, 3, 0, 720908, 29, 0, 720909, 0, 0, 720910, 1, 0, 720911, 2, 0, 720912, 29, 0, 720913, 0, 0, 720914, 1, 0, 720915, 1, 0, 720916, 2, 0, 720917, 3, 0, 720918, 29, 0, 720919, 0, 0, 720920, 1, 0, 720921, 2, 0, 720922, 29, 0, 720923, 7, 0, 720924, 29, 0, 720925, 7, 0, 720926, 29, 0, 720927, 3, 0, 720928, 29, 0, 720929, 3, 0, 720930, 29, 0, 720931, 0, 0, 720932, 1, 0, 720933, 1, 0, 720934, 1, 0, 720935, 1, 0, 720936, 1, 0, 720937, 1, 0, 720938, 1, 0, 720939, 2, 0, 720940, 29, 0, 720941, 3, 0, 720942, 29, 0, 720943, 3, 0, 720944, 29, 0, 720945, 3, 0, 720946, 29, 0 )
+
+[node name="Enemy" parent="." instance=ExtResource( 1 )]
+position = Vector2( 40.0359, 169.613 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 111.286, 124.113 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 152.652, 167.953 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 160.076, 86.9894 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 207.099, 57.2909 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 263.314, 23.7034 )
+
+[node name="Enemy7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 312.458, 56.2303 )
+
+[node name="Enemy8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 309.836, 166.73 )
+
+[node name="Enemy9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 351.414, 152.871 )
+
+[node name="Enemy10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 366.022, 103.052 )
+
+[node name="Enemy11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 394.115, 165.981 )
+
+[node name="Enemy12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 530.087, 24.3913 )
+
+[node name="Enemy13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 565.672, 88.0693 )
+
+[node name="Enemy14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 574.287, 8.28448 )
+
+[node name="Enemy15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 613.992, 122.53 )
+
+[node name="Enemy16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 625.978, 23.6421 )
+
+[node name="Enemy17" parent="." instance=ExtResource( 1 )]
+position = Vector2( 630.099, 72.3371 )
+
+[node name="Enemy18" parent="." instance=ExtResource( 1 )]
+position = Vector2( 630.473, 167.48 )
+
+[node name="Enemy19" parent="." instance=ExtResource( 1 )]
+position = Vector2( 668.306, 10.5319 )
+
+[node name="Enemy20" parent="." instance=ExtResource( 1 )]
+position = Vector2( 667.182, 168.229 )
+
+[node name="Enemy21" parent="." instance=ExtResource( 1 )]
+position = Vector2( 712.88, 24.3913 )
+
+[node name="Enemy22" parent="." instance=ExtResource( 1 )]
+position = Vector2( 776.933, 167.854 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 320, 0 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0.662171, 3.381 )
+scale = Vector2( 0.208645, 0.204621 )
+texture = ExtResource( 3 )
+centered = false
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="StageTrigger" parent="." instance=ExtResource( 5 )]
+position = Vector2( 775.078, 86.6387 )
+scale = Vector2( 0.24, 0.16 )
+target_stage = "res://StageThree.tscn"

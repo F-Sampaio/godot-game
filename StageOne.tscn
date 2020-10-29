@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://arts/TileSet/Scenario.tres" type="TileSet" id=2]
+[ext_resource path="res://Enemy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://arts/Background/menu.png" type="Texture" id=4]
+[ext_resource path="res://StageTrigger.tscn" type="PackedScene" id=5]
+
+[node name="StageOne" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 78.4227, 75.8819 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( 0, 8, 0, 50, 6, 0, 65536, 31, 0, 65586, 30, 0, 131072, 31, 0, 131122, 30, 0, 196608, 31, 0, 196658, 30, 0, 262144, 31, 0, 262176, 4, 0, 262177, 5, 0, 262194, 30, 0, 327680, 31, 0, 327703, 4, 0, 327704, 5, 0, 327720, 20, 0, 327721, 21, 0, 327722, 22, 0, 327730, 30, 0, 393216, 31, 0, 393224, 6, 0, 393225, 7, 0, 393226, 8, 0, 393263, 6, 0, 393264, 7, 0, 393265, 7, 0, 393266, 29, 0, 458752, 31, 0, 458756, 4, 0, 458757, 5, 0, 458760, 1610612744, 0, 458761, 1610612743, 0, 458762, 1610612742, 0, 458770, 4, 0, 458771, 1, 0, 458772, 5, 0, 458781, 4, 0, 458782, 5, 0, 458789, 9, 0, 458798, 6, 0, 458799, 29, 0, 458800, 3, 0, 458801, 29, 0, 458802, 3, 0, 524288, 3, 0, 524289, 5, 0, 524292, 30, 0, 524293, 31, 0, 524301, 9, 0, 524305, 4, 0, 524306, 3, 0, 524307, 29, 0, 524308, 3, 0, 524309, 8, 0, 524317, 30, 0, 524318, 31, 0, 524325, 10, 0, 524333, 6, 0, 524334, 29, 0, 524335, 3, 0, 524336, 29, 0, 524337, 3, 0, 524338, 29, 0, 589824, 29, 0, 589825, 31, 0, 589828, 30, 0, 589829, 31, 0, 589837, 10, 0, 589840, 4, 0, 589841, 3, 0, 589842, 29, 0, 589843, 3, 0, 589844, 29, 0, 589845, 3, 0, 589846, 8, 0, 589853, 30, 0, 589854, 31, 0, 589861, 10, 0, 589868, 6, 0, 589869, 29, 0, 589870, 3, 0, 589871, 29, 0, 589872, 3, 0, 589873, 29, 0, 589874, 3, 0, 655360, 3, 0, 655361, 0, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 2, 0, 655367, 20, 0, 655368, 21, 0, 655369, 21, 0, 655370, 21, 0, 655371, 22, 0, 655372, 0, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 655376, 1, 0, 655377, 1, 0, 655378, 1, 0, 655379, 1, 0, 655380, 1, 0, 655381, 1, 0, 655382, 1, 0, 655383, 1, 0, 655384, 1, 0, 655385, 1, 0, 655386, 1, 0, 655387, 1, 0, 655388, 1, 0, 655389, 1, 0, 655390, 1, 0, 655391, 1, 0, 655392, 1, 0, 655393, 1, 0, 655394, 1, 0, 655395, 1, 0, 655396, 1, 0, 655397, 1, 0, 655398, 1, 0, 655399, 1, 0, 655400, 1, 0, 655401, 1, 0, 655402, 1, 0, 655403, 1, 0, 655404, 1, 0, 655405, 1, 0, 655406, 1, 0, 655407, 1, 0, 655408, 1, 0, 655409, 1, 0, 655410, 1, 0, 720896, 3, 0, 720897, 3, 0, 720898, 3, 0, 720899, 3, 0, 720900, 3, 0, 720901, 3, 0, 720902, 3, 0, 720903, 3, 0, 720904, 3, 0, 720905, 3, 0, 720906, 3, 0, 720907, 3, 0, 720908, 3, 0, 720909, 3, 0, 720910, 3, 0, 720911, 3, 0, 720912, 3, 0, 720913, 3, 0, 720914, 3, 0, 720915, 3, 0, 720916, 3, 0, 720917, 3, 0, 720918, 3, 0, 720919, 3, 0, 720920, 3, 0, 720921, 3, 0, 720922, 3, 0, 720923, 3, 0, 720924, 3, 0, 720925, 3, 0, 720926, 3, 0, 720927, 3, 0, 720928, 3, 0, 720929, 3, 0, 720930, 3, 0, 720931, 3, 0, 720932, 3, 0, 720933, 3, 0, 720934, 3, 0, 720935, 3, 0, 720936, 3, 0, 720937, 3, 0, 720938, 3, 0, 720939, 3, 0, 720940, 3, 0, 720941, 3, 0, 720942, 3, 0, 720943, 3, 0, 720944, 3, 0, 720945, 3, 0, 720946, 3, 0 )
+
+[node name="Enemy" parent="." instance=ExtResource( 3 )]
+position = Vector2( 150.317, 85.7096 )
+
+[node name="Enemy2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 148.728, 144.51 )
+
+[node name="Enemy3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 311.356, 101.602 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 416.243, 148.218 )
+
+[node name="Enemy5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 529.076, 54.9851 )
+
+[node name="Enemy6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 546.557, 147.158 )
+
+[node name="Enemy7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 680.049, 52.8662 )
+
+[node name="Enemy8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 677.93, 147.688 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_base_scale = Vector2( 0.5, 0.5 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 320, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 0.0675662, -0.0920061 )
+scale = Vector2( 0.208645, 0.19476 )
+texture = ExtResource( 4 )
+centered = false
+
+[node name="StageTrigger" parent="." instance=ExtResource( 5 )]
+position = Vector2( 776.953, 78.5106 )
+scale = Vector2( 0.295607, 0.267827 )
+target_stage = "res://StageTwo.tscn"
